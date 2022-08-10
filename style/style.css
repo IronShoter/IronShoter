@@ -1,5 +1,8 @@
 body {
+  background-size: inherit;
+  background-image: url('../src/img/saturno.png');
   background-color: blueviolet;
+  background-repeat: no-repeat;
 }
 
 canvas {
@@ -13,9 +16,13 @@ canvas {
 }
 
 div {
+
   text-align: center;
 }
 
+b p {
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 
 .button-53 {
