@@ -6,28 +6,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style/style.css" rel="stylesheet">
-  <script src="src/cripts/component.js" defer></script>
+  <!-- Chamo meu component.js -->
+  <script src="src/scripts/component.js" defer></script>
+
+  <!-- Chamo obstacles.js -->
+  <script src="src/scripts/obstacles.js" defer></script>
+  <!-- Chamo script.js -->
+
+  <script src="src/scripts/script.js" defer></script>
+
+  <!-- Chamo index.js -->
   <script src="src/scripts/index.js" defer></script>
 </head>
 
 <body>
   <section>
     <div>
-      <h1 class="button-53"> IRON SHOTER HELP </h1>
+      <h1 class="css"> IRON SHOTER HELP </h1>
     </div>
-    <div>
-
-      <canvas id="canvas"></canvas>
-      <button class="button-53" id="start-game">START GAME</button>
-      <button class="button-53" role="button">STOP</button>
-      <b> PARA SE MOVER USE AS TECLAS</b>
-      <img height=100px wi src="src/img/controller.png">
-      <b> PARA ATIRAR USE A TECLA SPACE</b>
-      <img height=100px wi src="src/img/space.png">
-
-    </div>
-
   </section>
+
+  <section>
+    <div id="main">
+    </div>
+  </section>
+
+
+  <section>
+    <button class="css" id="start-game">
+      START GAME
+    </button>
+    <button class="css" role="button">
+      STOP
+    </button>
+  </section>
+
+  <section>
+    <b>PARA SE MOVER USE AS TECLAS</b>
+    <img height=100px wi src="src/img/controller.png">
+    <b>PARA ATIRAR USE A TECLA SPACE</b>
+    <img height=100px wi src="src/img/space.png">
+  </section>
+
 </body>
 
 </html>

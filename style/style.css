@@ -30,7 +30,7 @@ b {
 }
 
 
-.button-53 {
+.css{
   background-color: #3DD1E7;
   border: 0 solid #E5E7EB;
   box-sizing: border-box;
@@ -56,11 +56,11 @@ b {
   touch-action: manipulation;
 }
 
-.button-53:focus {
+.css:focus {
   outline: 0;
 }
 
-.button-53:after {
+.css:after {
   content: '';
   position: absolute;
   border: 1px solid #000000;
@@ -70,13 +70,13 @@ b {
   height: calc(100% - 1px);
 }
 
-.button-53:hover:after {
+.css:hover:after {
   bottom: 2px;
   left: 2px;
 }
 
 @media (min-width: 768px) {
-  .button-53 {
+  .css {
     padding: .75rem 3rem;
     font-size: 1.25rem;
   }

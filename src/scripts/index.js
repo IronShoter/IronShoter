@@ -1,18 +1,16 @@
-
-
 document.addEventListener('keydown', (e) => {
   const key = e.code;
   switch (key) {
-    case 'ArrowUp':
+    case 'ArrowUp': // up arrow
       myGameArea.player.speedY -= 1;
       break;
     case 'ArrowDown': // down arrow
       myGameArea.player.speedY += 1;
       break;
-    case 'ArrowLeft':
-      myGameArea.player.speedX -= 1;
+    case 'ArrowLeft': // left arrow
+      myGameArea.player.speedX -= 1
       break;
-    case 'ArrowRight':
+    case 'ArrowRight': // right arrow
       myGameArea.player.speedX += 1;
       break;
   }
