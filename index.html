@@ -6,47 +6,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style/style.css" rel="stylesheet">
-  <!-- Chamo meu component.js -->
   <script src="src/scripts/component.js" defer></script>
-
-  <!-- Chamo obstacles.js -->
   <script src="src/scripts/obstacles.js" defer></script>
-  <!-- Chamo script.js -->
-
   <script src="src/scripts/script.js" defer></script>
-
-  <!-- Chamo index.js -->
   <script src="src/scripts/index.js" defer></script>
 </head>
 
 <body>
-  <section>
-    <div>
-      <h1 class="css"> IRON SHOTER HELP </h1>
-    </div>
-  </section>
+  <div>
+    <audio id="audio-track" controls autoplay>
+      <source src="./src/music/trackingSuspense.mp3" type="audio/mp3">
+    </audio>
+  </div>
 
-  <section>
-    <div id="main">
-    </div>
-  </section>
+  <div id="main">
+  </div>
 
 
-  <section>
-    <button class="css" id="start-game">
-      START GAME
-    </button>
-    <button class="css" role="button">
-      STOP
-    </button>
-  </section>
-
-  <section>
+  <dialog id="myFirstDialog" style="width:100%;background-color:#00eb5a00;">
     <b>PARA SE MOVER USE AS TECLAS</b>
     <img height=100px wi src="src/img/controller.png">
     <b>PARA ATIRAR USE A TECLA SPACE</b>
     <img height=100px wi src="src/img/space.png">
-  </section>
+    <button id="hide" class="css">Close</button>
+
+  </dialog>
+
+  <button id="show" class="css"> IRON SHOTER HELP </button>
+  </div>
+  </div>
+
+
+
+  <button class="css" id="start-game">
+    START GAME</button>
 
 </body>
 

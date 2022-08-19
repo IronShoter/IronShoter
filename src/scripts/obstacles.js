@@ -13,7 +13,6 @@ const randomImag = () => {
     ]
 
     let randomImags = Math.floor(Math.random() * images.length);
-
     return `./src/img/${images[randomImags]}`
 
 }
@@ -21,13 +20,11 @@ const randomImag = () => {
 function createObstacle() {
     // posição inicial obstaculos
     let x = myGameArea.canvas.width
-    let y = Math.floor(Math.random() * 260 / 2 * Math.random())
+    let y = Math.floor(Math.random() * 260 / 2 + 2 * Math.random())
     let obstacle = new Component(x, y, 60, 80, randomImag())
     myGameArea.obstacles.push(obstacle)
 
 }
-
-
 
 function updateObstacle() {
 

@@ -4,12 +4,17 @@ const myGameArea = {
   obstacles: [],
   stop: false,
   player: null,
+
   start: function () {
-    this.player = new Component(0, 0, 80, 120, 'src/img/naveNitro.png')
+    this.player = new Component(0, 0, 60, 60, 'src/img/naveNitro.png')
     this.canvas.width = 480;
     this.canvas.height = 270;
+
     this.context = this.canvas.getContext('2d');
     const main = document.getElementById('main')
+    const audio = document.getElementById('audio-track')
+    audio.volume = 0.15
+    audio.play();
     main.appendChild(this.canvas);
     updateGameArea()
   },
@@ -18,10 +23,17 @@ const myGameArea = {
   },
   score: function () {
     const points = Math.floor(this.frames / 5);
-    this.context.font = '18px serif';
-    this.context.fillStyle = 'black';
+    this.context.font = '20px verdana';
+    this.context.fillStyle = 'white';
     this.context.fillText(`Score: ${points}`, 350, 50);
   },
+  gameOver: function () {
+    const img = new Image();
+    img.src = "./src/img/game-over.jpg"
+    img.onload = () => { this.context.drawImage(img, 0, 0, 480, 270) }
+
+  },
+
 };
 
 function updateGameArea() {
@@ -31,17 +43,25 @@ function updateGameArea() {
   updateObstacle()
 
   myGameArea.frames += 1
-  // console.log(myGameArea.frames);
   myGameArea.score()
   checkGameOver()
   if (!myGameArea.stop) {
     requestAnimationFrame(updateGameArea)
+
   }
 }
 
 function checkGameOver() {
   const crashed = myGameArea.obstacles.some(obstacle => myGameArea.player.crashWith(obstacle))
   if (crashed) {
-    myGameArea.stop = true
+    myGameArea.stop = !myGameArea.stop
+    myGameArea.gameOver()
+    myGameArea.clear();
+    myGameArea.obstacles = [];
+    setInterval(() => {
+
+      document.location.reload();
+    }, 2000);
+
   }
 }

@@ -15,9 +15,7 @@ class Component {
 
     draw() {
         const ctx = myGameArea.context
-
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-
     }
 
     newPos() {

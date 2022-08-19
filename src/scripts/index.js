@@ -1,5 +1,6 @@
 document.addEventListener('keydown', (e) => {
   const key = e.code;
+
   switch (key) {
     case 'ArrowUp': // up arrow
       myGameArea.player.speedY -= 1;
@@ -14,6 +15,7 @@ document.addEventListener('keydown', (e) => {
       myGameArea.player.speedX += 1;
       break;
   }
+  e.preventDefault();
 })
 
 document.addEventListener('keyup', () => {
@@ -24,4 +26,12 @@ document.addEventListener('keyup', () => {
 document.getElementById('start-game').onclick = () => {
   myGameArea.start()
 
-} 
+}
+
+var dialog =document.getElementById('myFirstDialog');
+document.getElementById('show').onclick = function () {
+  dialog.show();
+};
+document.getElementById('hide').onclick = function () {
+  dialog.close();
+};    

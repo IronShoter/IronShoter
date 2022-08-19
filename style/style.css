@@ -75,9 +75,9 @@ b {
   left: 2px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .css {
     padding: .75rem 3rem;
     font-size: 1.25rem;
   }
-}
+} */
