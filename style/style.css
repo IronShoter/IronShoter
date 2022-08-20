@@ -5,6 +5,13 @@ body {
   background-repeat: no-repeat;
 }
 
+dialog {
+
+  width: "100%";
+  background-color: "#0000ffcc";
+
+}
+
 canvas {
   background-image: url('../src/img/start.webp');
   background-size: 800px 400px;
@@ -29,8 +36,17 @@ b {
   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+button>img {
 
-.css{
+  margin-top: 100px;
+}
+
+.help {
+  margin-top: 200px;
+  display: "flexbox";
+}
+
+.css {
   background-color: #3DD1E7;
   border: 0 solid #E5E7EB;
   box-sizing: border-box;
