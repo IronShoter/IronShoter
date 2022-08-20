@@ -18,12 +18,13 @@ const randomImag = () => {
 }
 
 function createObstacle() {
-    // posição inicial obstaculos
-    let x = myGameArea.canvas.width
-    let y = Math.floor(Math.random() * 260 / 2 + 2 * Math.random())
-    let obstacle = new Component(x, y, 30, 50, randomImag())
-    myGameArea.obstacles.push(obstacle)
+    setTimeout(() => {
 
+        let x = myGameArea.canvas.width
+        let y = Math.floor(Math.random() * 1200 * Math.random())
+        let obstacle = new Component(x, y, 100, 150, randomImag())
+        myGameArea.obstacles.push(obstacle)
+    }, 2000)
 }
 
 function updateObstacle() {

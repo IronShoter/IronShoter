@@ -6,14 +6,14 @@ const myGameArea = {
   player: null,
 
   start: function () {
-    this.player = new Component(0, 0, 60, 60, 'src/img/naveNitro.png')
-    this.canvas.width = 480;
-    this.canvas.height = 270;
+    this.player = new Component(0, 0, 100,100, 'src/img/naveNitro.png')
+    this.canvas.width = 800;
+    this.canvas.height = 1200;
 
     this.context = this.canvas.getContext('2d');
     const main = document.getElementById('main')
     const audio = document.getElementById('audio-track')
-    audio.volume = 0.15
+    audio.volume = 0.10
     audio.play();
     main.appendChild(this.canvas);
     updateGameArea()
@@ -23,14 +23,14 @@ const myGameArea = {
   },
   score: function () {
     const points = Math.floor(this.frames / 5);
-    this.context.font = '20px verdana';
+    this.context.font = '60px verdana';
     this.context.fillStyle = 'white';
     this.context.fillText(`Score: ${points}`, 350, 50);
   },
   gameOver: function () {
     const img = new Image();
     img.src = "./src/img/game-over.jpg"
-    img.onload = () => { this.context.drawImage(img, 0, 0, 480, 270) }
+    img.onload = () => { this.context.drawImage(img, 0, 0, 800, 1200) }
 
   },
 
